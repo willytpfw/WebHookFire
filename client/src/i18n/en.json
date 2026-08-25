@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "WebHookFire",
+    "subtitle": "Webhook Manager"
+  },
+  "actions": {
+    "add": "Add Webhook",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "webhooks": {
+    "name": "Name",
+    "description": "Description",
+    "url": "URL",
+    "namePlaceholder": "My Webhook",
+    "descriptionPlaceholder": "Optional description...",
+    "urlPlaceholder": "https://example.com/webhook",
+    "addTitle": "Add Webhook",
+    "editTitle": "Edit Webhook",
+    "deleteTitle": "Delete Webhook",
+    "deleteConfirm": "Are you sure you want to delete <strong>{{name}}</strong>? This action cannot be undone.",
+    "empty": "No webhooks yet",
+    "emptyDescription": "Add your first webhook to get started.",
+    "fire": "Fire",
+    "edit": "Edit",
+    "delete": "Delete",
+    "success": {
+      "created": "Webhook created successfully.",
+      "updated": "Webhook updated successfully.",
+      "deleted": "Webhook deleted.",
+      "fired": "Fired! Response: {{status}} {{statusText}}"
+    },
+    "error": {
+      "load": "Failed to load webhooks.",
+      "create": "Failed to create webhook.",
+      "update": "Failed to update webhook.",
+      "delete": "Failed to delete webhook.",
+      "fire": "Failed to fire webhook.",
+      "notFound": "Webhook not found.",
+      "nameTaken": "A webhook with this name already exists.",
+      "timeout": "Request timed out (>10s).",
+      "unreachable": "URL is unreachable.",
+      "checkConstraint": "Data does not meet database constraints."
+    }
+  },
+  "validation": {
+    "required": "This field is required.",
+    "invalidUrl": "Please enter a valid URL (http/https).",
+    "nameTooLong": "Name must be 120 characters or less.",
+    "descriptionTooLong": "Description must be 500 characters or less.",
+    "invalidId": "Invalid ID."
+  },
+  "lang": {
+    "en": "EN",
+    "es": "ES"
+  }
+}

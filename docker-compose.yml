@@ -1,0 +1,21 @@
+services:
+  webhookfire:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webhookfire
+    ports:
+      - "3001:3001"
+    volumes:
+      # Persist SQLite database outside the container
+      - ./data:/app/server/db
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3001/api/webhooks"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

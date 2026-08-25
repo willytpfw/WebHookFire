@@ -1,0 +1,59 @@
+{
+  "app": {
+    "title": "WebHookFire",
+    "subtitle": "Gestor de Webhooks"
+  },
+  "actions": {
+    "add": "Agregar Webhook",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Cerrar"
+  },
+  "webhooks": {
+    "name": "Nombre",
+    "description": "Descripción",
+    "url": "URL",
+    "namePlaceholder": "Mi Webhook",
+    "descriptionPlaceholder": "Descripción opcional...",
+    "urlPlaceholder": "https://ejemplo.com/webhook",
+    "addTitle": "Agregar Webhook",
+    "editTitle": "Editar Webhook",
+    "deleteTitle": "Eliminar Webhook",
+    "deleteConfirm": "¿Estás seguro de que deseas eliminar <strong>{{name}}</strong>? Esta acción no se puede deshacer.",
+    "empty": "Sin webhooks registrados",
+    "emptyDescription": "Agrega tu primer webhook para comenzar.",
+    "fire": "Ejecutar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "success": {
+      "created": "Webhook creado exitosamente.",
+      "updated": "Webhook actualizado exitosamente.",
+      "deleted": "Webhook eliminado.",
+      "fired": "¡Ejecutado! Respuesta: {{status}} {{statusText}}"
+    },
+    "error": {
+      "load": "Error al cargar los webhooks.",
+      "create": "Error al crear el webhook.",
+      "update": "Error al actualizar el webhook.",
+      "delete": "Error al eliminar el webhook.",
+      "fire": "Error al ejecutar el webhook.",
+      "notFound": "Webhook no encontrado.",
+      "nameTaken": "Ya existe un webhook con ese nombre.",
+      "timeout": "La solicitud tardó demasiado (>10s).",
+      "unreachable": "La URL no es accesible.",
+      "checkConstraint": "Los datos no cumplen las restricciones de la base de datos."
+    }
+  },
+  "validation": {
+    "required": "Este campo es obligatorio.",
+    "invalidUrl": "Ingresa una URL válida (http/https).",
+    "nameTooLong": "El nombre debe tener 120 caracteres o menos.",
+    "descriptionTooLong": "La descripción debe tener 500 caracteres o menos.",
+    "invalidId": "ID inválido."
+  },
+  "lang": {
+    "en": "EN",
+    "es": "ES"
+  }
+}
