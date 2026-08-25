@@ -23,11 +23,11 @@ WORKDIR /app
 # Herramientas necesarias para compilar módulos nativos (better-sqlite3) en Alpine/musl
 RUN apk add --no-cache python3 make g++
 
-# Install server dependencies (production only)
+# Install server dependencies (production only) — genera better_sqlite3.node nativo para aarch64
 COPY server/package.json server/package-lock.json* ./server/
 RUN cd server && npm install --omit=dev && npm rebuild better-sqlite3 --build-from-source
 
-# Copy server source
+# Copy server source (con node_modules ya fuera del repo vía .gitignore, esto no sobrescribe el build nativo)
 COPY server/ ./server/
 
 # Copy built React app from build stage
