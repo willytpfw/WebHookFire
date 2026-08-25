@@ -1,4 +1,4 @@
-FROM node:22-alpine AS runtime
+   FROM node:22-alpine AS build   ← debe decir exactamente esto
 
 WORKDIR /app
 

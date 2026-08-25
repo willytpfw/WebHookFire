@@ -1,6 +1,6 @@
 name: WebHookFire
 slug: webhookfire
-version: "1.0.2"
+version: "1.0.3"
 description: Gestor minimalista de webhooks (React + Express + SQLite)
 url: https://github.com/willytpfw/WebHookFire
 arch:
