@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Install client dependencies
 COPY client/package.json client/package-lock.json* ./client/
-RUN cd client && npm install
+RUN cd client && npm install && chmod +x node_modules/.bin/*
 
 # Copy client source and build
 COPY client/ ./client/
