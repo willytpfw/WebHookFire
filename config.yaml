@@ -1,6 +1,6 @@
 name: WebHookFire
 slug: webhookfire
-version: "1.0.5"
+version: "1.0.6"
 description: Gestor minimalista de webhooks (React + Express + SQLite)
 url: https://github.com/willytpfw/WebHookFire
 arch:
@@ -8,8 +8,10 @@ arch:
 init: false
 startup: application
 boot: auto
+ingress: true
+ingress_port: 3001
+panel_icon: mdi:webhook
 ports:
   3001/tcp: 3001
 ports_description:
-  3001/tcp: "Interfaz web de WebHookFire"
-ingress: false
+  3001/tcp: "Interfaz web de WebHookFire (acceso directo, opcional)"
