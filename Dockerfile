@@ -7,11 +7,11 @@ WORKDIR /app
 
 # Install client dependencies
 COPY client/package.json client/package-lock.json* ./client/
-RUN cd client && npm install && chmod +x node_modules/.bin/*
+RUN cd client && npm install
 
 # Copy client source and build
 COPY client/ ./client/
-RUN cd client && npm run build
+RUN cd client && node node_modules/vite/bin/vite.js build
 
 # ──────────────────────────────────────────────
 # Stage 2: Runtime — Node server + built client
