@@ -26,26 +26,6 @@ export default function WebhookRow({ webhook, onEdit, onDelete, onFire }) {
         <span className="block text-sm font-semibold text-gray-900">{webhook.Name}</span>
       </td>
 
-      {/* Description */}
-      <td className="px-4 py-3.5 hidden md:table-cell">
-        <span className="text-sm text-gray-500 line-clamp-1">
-          {webhook.Description || <span className="italic text-gray-300">—</span>}
-        </span>
-      </td>
-
-      {/* URL */}
-      <td className="px-4 py-3.5">
-        <a
-          href={webhook.URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="max-w-xs block truncate text-xs text-brand-600 hover:underline font-mono"
-          title={webhook.URL}
-        >
-          {webhook.URL}
-        </a>
-      </td>
-
       {/* Actions */}
       <td className="px-4 py-3.5">
         <div className="flex items-center justify-end gap-1.5">

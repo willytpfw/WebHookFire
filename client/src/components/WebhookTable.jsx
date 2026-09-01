@@ -25,14 +25,8 @@ export default function WebhookTable({ webhooks, loading, onAdd, onEdit, onDelet
       <table className="w-full text-left">
         <thead>
           <tr className="border-b border-gray-100 bg-gray-50/70">
-            <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400">
+            <th className="px-2 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400">
               {t('webhooks.name')}
-            </th>
-            <th className="hidden px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400 md:table-cell">
-              {t('webhooks.description')}
-            </th>
-            <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400">
-              {t('webhooks.url')}
             </th>
             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-400">
               &nbsp;
