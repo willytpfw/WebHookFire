@@ -59,6 +59,8 @@ router.put('/:id', idRule, webhookRules, handleValidation, (req, res) => {
       'UPDATE WebHook SET Name = ?, Description = ?, URL = ? WHERE Id = ?'
     ).run(Name.trim(), Description.trim(), URL.trim(), id);
 
+    db.pragma('wal_checkpoint');
+
     const updated = db.prepare('SELECT * FROM WebHook WHERE Id = ?').get(id);
     res.json(updated);
   } catch (err) {
@@ -79,6 +81,9 @@ router.delete('/:id', idRule, handleValidation, (req, res) => {
     if (!existing) return res.status(404).json({ error: 'webhooks.error.notFound' });
 
     db.prepare('DELETE FROM WebHook WHERE Id = ?').run(req.params.id);
+
+    db.pragma('wal_checkpoint');
+
     res.status(204).send();
   } catch (err) {
     res.status(500).json({ error: err.message });
