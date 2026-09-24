@@ -28,4 +28,9 @@ app.listen(PORT, () => {
   console.log(`WebHookFire server running on http://localhost:${PORT}`);
 });
 
+process.on('SIGTERM', () => {
+  db.close();
+  process.exit(0);
+});
+
 module.exports = app;
