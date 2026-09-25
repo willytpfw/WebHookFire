@@ -13,7 +13,7 @@ if (!fs.existsSync(DB_DIR)) {
 const db = new Database(DB_PATH);
 
 // Enable WAL mode for better concurrent performance
-db.pragma('journal_mode = WAL');
+db.pragma('journal_mode = DELETE');
 db.pragma('foreign_keys = ON');
 
 // Create table with all integrity constraints
