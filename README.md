@@ -8,7 +8,7 @@ A minimalist webhook manager built with **React 19 + Vite**, **Node.js / Express
 
 ### Prerequisites
 - Node.js 22+
-
+- Create a Volumen in Home Assistant for database: docker volume create webhookfire_db
 ### 1. Install server dependencies
 ```bash
 cd server
