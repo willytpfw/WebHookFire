@@ -6,7 +6,8 @@ services:
     container_name: webhookfire
     ports:
       - "3001:3001"
-    volumes: webhookfire_db:/app/server/db
+    volumes:
+      - webhookfire_db:/app/server/db
     environment:
       - NODE_ENV=production
       - PORT=3001
