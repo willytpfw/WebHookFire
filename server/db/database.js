@@ -2,8 +2,10 @@ const Database = require('better-sqlite3');
 const path = require('path');
 const fs = require('fs');
 
-const DB_DIR = path.join(__dirname);
-const DB_PATH = path.join(DB_DIR, 'webhooks.db');
+// Usa DB_PATH si está definida (Home Assistant Supervisor la inyecta apuntando a /data),
+// si no, cae al comportamiento local anterior para desarrollo fuera de HA
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'webhooks.db');
+const DB_DIR = path.dirname(DB_PATH);
 
 // Ensure the db directory exists
 if (!fs.existsSync(DB_DIR)) {
