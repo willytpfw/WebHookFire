@@ -36,6 +36,9 @@ COPY --from=build /app/client/dist ./client/dist
 # Create persistent db directory
 RUN mkdir -p /app/server/db
 
+# Persist DB outside container
+VOLUME ["/app/server/db"]
+
 # Expose the API/static server port
 EXPOSE 3001
 
